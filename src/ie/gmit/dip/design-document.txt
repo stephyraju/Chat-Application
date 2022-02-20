@@ -1,0 +1,77 @@
+Description of Project Design/ implementation
+==========================================================
+
+This Network Programming Project is a simple implementation of Java Socket API.
+
+This project include two main programs:
+
+1. Server Program
+2. Client Program
+
+1. Server Program
+-----------------------
+
+The Server program uses java.net.SocketServer to establish a server connection and create a sender and receiver threads.
+Server program accepts a port number from the user and validates it for a valid port number range.
+If the entered port is valid, Server program will try to start the ServerSocket on that port. If that port is being
+used by any other application, the Server program will stop and let the user to enter another unused port.
+
+When Server program gets an unused port, then Server program will create a sender and a receiver threads waiting for Client Connections.
+
+At this state, Client users can start typing and send text messages.
+
+Users can enter by entering “\q” should they wish to gracefully end the chat session and close the connection.
+
+2. Client Program
+-----------------------
+
+The Client Program used java.net.Socket to establish a client connection and create a sender and receiver threads.
+Client Program accepts a port number from the user and validates it for a valid port number range.
+If the entered port is valid, Client Program will try to start the Server on that port. If there is no Server application running on this port, then client program will stop and let the user to 
+enter another port.
+
+When Client program able to connect to Server port, then Client program will create a sender and a receiver threads waiting for user to send and receive messages. 
+
+At this stage, Client users can start typing and send text messages.
+
+Users can enter by entering “q” should they wish to gracefully end the chat session and close the connection.
+
+
+Instructions for running the application
+==========================================================
+
+Below are the Steps and Instructions to run the application.
+
+Step 1: Run the Server.java class
+
+Step 2: Enter a valid unused port number for Server application to run.
+
+Step 3: Wait for Clients to connect to the Server application.
+
+Step 4: Type text messages to Clients and view the responses in Server application.
+
+Step 5: Run the Client.java class
+
+Step 6: Enter a valid port number where the Server application is currently running (Use the same port entered for Server.java).
+
+Step 7: Wait for Client to connect to the Server application.
+
+Step 8: Type text messages to Server and view the server responses in Client application.
+
+Step 9: Enter “q” or “quit” if you wish to stop the Server application and end the chat session.
+
+
+
+References to sources consulted
+==========================================================
+
+Below are the major resources used for inspiration and troubleshooting while developing this Network Programming Project.
+
+Java™ Platform, Standard Edition 7 API Specification
+https://docs.oracle.com/javase/7/docs/api/overview-summary.html
+
+Class ServerSocket
+https://docs.oracle.com/javase/7/docs/api/java/net/ServerSocket.html
+
+Why does my sockets getInputStream return null?
+https://stackoverflow.com/questions/13537691/why-does-my-sockets-getinputstream-return-null
